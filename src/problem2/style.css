@@ -4,5 +4,70 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 360px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", Helvetica, sans-serif;
+}
+
+:root {
+  /* CSS HSL */
+  --steel-blue: hsla(210, 50%, 51%, 1);
+  --golden-tainoi: hsla(40, 100%, 67%, 1);
+
+  --steel-blue-50: #f3f6fc;
+  --steel-blue-100: #e6edf8;
+  --steel-blue-200: #c8d9ef;
+  --steel-blue-300: #98bbe1;
+  --steel-blue-400: #6197cf;
+  --steel-blue-500: #4381c1;
+  --steel-blue-600: #2d609c;
+  --steel-blue-700: #254d7f;
+  --steel-blue-800: #22436a;
+  --steel-blue-900: #213959;
+  --steel-blue-950: #16253b;
+
+  --golden-tainoi-50: #fff9eb;
+  --golden-tainoi-100: #ffeec6;
+  --golden-tainoi-200: #ffdb88;
+  --golden-tainoi-300: #ffc759;
+  --golden-tainoi-400: #ffaa20;
+  --golden-tainoi-500: #f98607;
+  --golden-tainoi-600: #dd6002;
+  --golden-tainoi-700: #b74106;
+  --golden-tainoi-800: #94310c;
+  --golden-tainoi-900: #7a2a0d;
+  --golden-tainoi-950: #461302;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--golden-tainoi-100);
+  padding-top: 8px;
+  padding-bottom: 24px;
+  padding-left: 48px;
+  padding-right: 48px;
+  /* padding: 16px 32px; */
+  border-radius: 7px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #6197cf;
+}
+
+.flexbox .vertical {
+  flex-direction: column;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+label {
+  padding-right: 1.5rem;
+}
+
+pb-8 {
+  padding-bottom: 0.5rem;
 }

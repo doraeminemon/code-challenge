@@ -5,21 +5,28 @@
   <title>Fancy Form</title>
 
   <!-- You may add more stuff here -->
-  <link href="style.css" rel="stylesheet" />
+  <link href="./fonts.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body style="background-color: var(--steel-blue-100);">
 
   <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <h5>Swap</h5>
-    <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+  <form onsubmit="submitForm">
+    <h3 style="color: var(--golden-tainoi-800);">Swap</h3>
+    <div class="flexbox vertical pb-8" style="padding-bottom: 8px; row-gap: 12px">
+      <fieldset style="padding-bottom: 12px;">
+        <label for="input-amount">Amount to send</label>
+        <input id="input-amount" style="border-radius: 4px; border-width: 1px;" />
+      </fieldset>
 
-    <label for="output-amount">Amount to receive</label>
-    <input id="output-amount" />
+      <fieldset>
+        <label for="output-amount">Amount to receive</label>
+        <input id="output-amount" style="border-radius: 4px;  border-width: 1px" />
+      </fieldset>
+    </div>
 
-    <button>CONFIRM SWAP</button>
+    <button style="border-radius: 4px;  border-width: 1px">CONFIRM SWAP</button>
   </form>
   <script src="script.js"></script>
 </body>
