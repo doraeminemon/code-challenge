@@ -12,23 +12,41 @@
 <body style="background-color: var(--steel-blue-100);">
 
   <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="submitForm">
+  <form onsubmit="submitForm()">
     <h3 style="color: var(--golden-tainoi-800);">Swap</h3>
     <div class="flexbox vertical pb-8" style="padding-bottom: 8px; row-gap: 12px">
       <fieldset style="padding-bottom: 12px;">
         <label for="input-amount">Amount to send</label>
-        <input id="input-amount" style="border-radius: 4px; border-width: 1px;" />
+        <input id="input-amount" style="border-radius: 4px; border-width: 1px;" inputmode="numeric" type="number" />
+        <select id="input"></select>
       </fieldset>
 
       <fieldset>
         <label for="output-amount">Amount to receive</label>
-        <input id="output-amount" style="border-radius: 4px;  border-width: 1px" />
+        <input id="output-amount" style="border-radius: 4px;  border-width: 1px" inputmode="numeric" type="number" />
+        <select id="output"></select>
       </fieldset>
     </div>
 
     <button style="border-radius: 4px;  border-width: 1px">CONFIRM SWAP</button>
   </form>
   <script src="script.js"></script>
+  <script>
+    window.onload = () => {
+      const inputSelectTag = document.querySelector('select#input')
+      const outputSelectTag = document.querySelector('select#output')
+      window.ExchangeRate.forEach(item => {
+        const inputOption = document.createElement('option')
+        inputOption.value = item.price
+        inputOption.innerHTML = item.currency
+        const outputOption = document.createElement('option')
+        outputOption.value = item.price
+        outputOption.innerHTML = item.currency
+        inputSelectTag.append(inputOption)
+        outputSelectTag.append(outputOption)
+      })
+    }
+  </script>
 </body>
 
 </html>
